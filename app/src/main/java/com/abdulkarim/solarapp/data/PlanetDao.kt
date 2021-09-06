@@ -5,7 +5,7 @@ import androidx.room.*
 @Dao
 interface PlanetDao {
 
-    @Insert
+    @Insert()
     suspend fun insertAllPlanet(planets: List<Planet>)
 
     @Query("SELECT * FROM planet_table")

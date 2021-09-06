@@ -18,11 +18,13 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        //insertPlanetsToDb()
+        insertPlanetsToDb()
 
         findViewById<Button>(R.id.exploreBtn).setOnClickListener {
             startActivity(Intent(this,PlanetListActivity::class.java))
         }
+
+
 
 
     }
@@ -31,8 +33,13 @@ class MainActivity : AppCompatActivity() {
 
         val database = AppDatabase.getInstance(this)
 
+
         lifecycleScope.launch {
-            database?.getPlanetDao()?.insertAllPlanet(getAllPlanets())
+            val list = database?.getPlanetDao()?.loadAllPlanet()
+            if (list?.size == 0){
+                database.getPlanetDao().insertAllPlanet(getAllPlanets())
+            }
+
         }
 
     }
