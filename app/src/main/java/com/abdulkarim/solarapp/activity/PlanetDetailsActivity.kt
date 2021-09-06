@@ -8,6 +8,7 @@ import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
+import com.abdulkarim.solarapp.AppConstant
 import com.abdulkarim.solarapp.MainActivity
 import com.abdulkarim.solarapp.R
 import com.abdulkarim.solarapp.data.Planet
@@ -21,7 +22,7 @@ class PlanetDetailsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_planet_details)
 
-        val planet = intent.getSerializableExtra("planet") as Planet
+        val planet = intent.getSerializableExtra(AppConstant.PLANET_EXTRAS) as Planet
 
         findViewById<TextView>(R.id.planetTitleNameTv).text = planet.name
         findViewById<TextView>(R.id.planetSizeTv).text = planet.size

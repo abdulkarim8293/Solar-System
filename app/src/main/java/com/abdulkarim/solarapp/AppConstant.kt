@@ -6,6 +6,8 @@ class AppConstant {
 
     companion object {
 
+        const val PLANET_EXTRAS = "planet"
+
         const val MERCURY = "Mercury"
         const val VENUS = "Venus"
         const val EARTH = "Earth"
