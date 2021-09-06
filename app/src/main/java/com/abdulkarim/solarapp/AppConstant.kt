@@ -1,5 +1,7 @@
 package com.abdulkarim.solarapp
 
+import com.abdulkarim.solarapp.data.Planet
+
 class AppConstant {
 
     companion object {
@@ -39,6 +41,7 @@ class AppConstant {
         const val IMAGE_URL_OF_SATURN = "https://www.google.com/search?q=staurn+image&tbm=isch&ved=2ahUKEwjMuu2v6OnyAhWkJrcAHUi9Ak0Q2-cCegQIABAA&oq=staurn+image&gs_lcp=CgNpbWcQAzIGCAAQChAYOgUIABCABDoGCAAQBxAeUL2wBFiazQRgws8EaABwAHgAgAG-AYgBhAqSAQMwLjeYAQCgAQGqAQtnd3Mtd2l6LWltZ8ABAQ&sclient=img&ei=58E1YYyrEaTN3LUPyPqK6AQ&bih=955&biw=1920&client=firefox-b-d#imgrc=SKMievfTr8MzyM"
         const val IMAGE_URL_OF_URANUS = "https://www.google.com/search?q=uranus+image&tbm=isch&ved=2ahUKEwj7vtHU6OnyAhX803MBHXA9BpwQ2-cCegQIABAA&oq=uranus+image&gs_lcp=CgNpbWcQAzIECAAQQzIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDoGCAAQBxAeUOXzAlikkwNg5ZcDaARwAHgAgAHeAogBqQqSAQcwLjQuMS4xmAEAoAEBqgELZ3dzLXdpei1pbWfAAQE&sclient=img&ei=NMI1YfvUGfynz7sP8PqY4Ak&bih=955&biw=1920&client=firefox-b-d#imgrc=2-BGEIAJqI20dM"
         const val IMAGE_URL_OF_NEPTUNE = "https://www.google.com/search?q=neptune+image&tbm=isch&ved=2ahUKEwiksJju6OnyAhUtA7cAHUQhCfcQ2-cCegQIABAA&oq=neptune+image&gs_lcp=CgNpbWcQAzIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQ6BggAEAcQHlDZ1ANYspEEYLWTBGgBcAB4AIAB_AGIAawNkgEFMC43LjKYAQCgAQGqAQtnd3Mtd2l6LWltZ8ABAQ&sclient=img&ei=asI1YaRTrYbctQ_EwqS4Dw&bih=955&biw=1920&client=firefox-b-d#imgrc=KkgIjr0DIq68aM"
+
 
     }
 

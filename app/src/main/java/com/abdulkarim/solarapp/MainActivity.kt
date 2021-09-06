@@ -2,14 +2,35 @@ package com.abdulkarim.solarapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import androidx.lifecycle.lifecycleScope
 import com.abdulkarim.solarapp.data.Planet
+import com.abdulkarim.solarapp.database.AppDatabase
+import kotlinx.coroutines.launch
+import kotlin.math.log
 
 class MainActivity : AppCompatActivity() {
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        //insertPlanetsToDb()
+
+
+    }
+
+   private  fun insertPlanetsToDb() {
+
+        val database = AppDatabase.getInstance(this)
+
+        lifecycleScope.launch {
+            database?.getPlanetDao()?.insertAllPlanet(getAllPlanets())
+        }
+
+    }
+
+    private fun getAllPlanets():List<Planet>{
 
         val planets = ArrayList<Planet>()
 
@@ -22,17 +43,7 @@ class MainActivity : AppCompatActivity() {
         planets.add(Planet(0,AppConstant.URANUS,AppConstant.SIZE_OF_URANUS,AppConstant.IMAGE_URL_OF_URANUS,AppConstant.DESCRIPTION_OF_URANUS))
         planets.add(Planet(0,AppConstant.NEPTUNE,AppConstant.SIZE_OF_NEPTUNE,AppConstant.IMAGE_URL_OF_NEPTUNE,AppConstant.DESCRIPTION_OF_NEPTUNE))
 
-
-
-        //
-
-
-        insertPlanetsToDb(planets)
-
-    }
-
-    private fun insertPlanetsToDb(planets: ArrayList<Planet>) {
-
+        return planets
 
     }
 

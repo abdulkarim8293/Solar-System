@@ -27,7 +27,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:paddingLeft="16dp"
-        android:text="@string/solar_system"
+        android:text="@string/to_solar_system"
         android:textSize="30sp"
 
         app:layout_constraintEnd_toEndOf="@+id/welcomeTv"
