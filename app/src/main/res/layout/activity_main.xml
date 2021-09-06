@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="80dp"
         android:layout_marginEnd="16dp"
         android:gravity="center"
         android:text="@string/welcome_to_solar_system"
@@ -26,9 +26,10 @@
         android:id="@+id/solarSystemTv"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:paddingLeft="16dp"
         android:text="@string/solar_system"
         android:textSize="30sp"
-        android:paddingLeft="16dp"
+
         app:layout_constraintEnd_toEndOf="@+id/welcomeTv"
         app:layout_constraintStart_toStartOf="@+id/welcomeTv"
         app:layout_constraintTop_toBottomOf="@+id/welcomeTv" />
@@ -40,7 +41,8 @@
         android:text="@string/explore"
         app:layout_constraintBottom_toTopOf="@+id/loginWithTv"
         app:layout_constraintTop_toBottomOf="@+id/solarSystemTv"
-        tools:layout_editor_absoluteX="155dp" />
+        tools:layout_editor_absoluteX="156dp" />
+
 
     <TextView
         android:id="@+id/facebookTv"
@@ -67,13 +69,13 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:textColor="@color/white"
+        android:background="#F44336"
         android:paddingLeft="16dp"
         android:paddingTop="8dp"
         android:paddingRight="16dp"
         android:paddingBottom="8dp"
         android:text="G"
-        android:background="#F44336"
+        android:textColor="@color/white"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="@+id/facebookTv"
         app:layout_constraintEnd_toStartOf="@+id/textView3"
@@ -103,7 +105,7 @@
         android:id="@+id/loginWithTv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="16dp"
         android:padding="8dp"
         android:text="Login With"
         app:layout_constraintBottom_toTopOf="@+id/facebookTv"
@@ -113,11 +115,30 @@
 
     <View
         android:layout_width="0dp"
+        android:layout_height="4dp"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/vertical_dash_line"
+        app:layout_constraintBottom_toBottomOf="@+id/loginWithTv"
+        app:layout_constraintEnd_toStartOf="@+id/loginWithTv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/loginWithTv" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="4dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/vertical_dash_line"
+        app:layout_constraintBottom_toBottomOf="@+id/loginWithTv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/loginWithTv"
+        app:layout_constraintTop_toTopOf="@+id/loginWithTv" />
+
+    <View
+        android:layout_width="0dp"
         android:layout_height="32dp"
         android:background="#9E9D9D"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
