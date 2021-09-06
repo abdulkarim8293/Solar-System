@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
 import com.abdulkarim.solarapp.OnItemClickListener
 import com.abdulkarim.solarapp.R
@@ -23,6 +24,11 @@ class PlanetAdapter(private val planets: List<Planet>?, private val onItemClickL
         holder.name.text = planet?.name
         holder.size.text = planet?.size
         holder.description.text = planet?.description
+
+        holder.rootLayout.setOnClickListener {
+            planet?.let { it -> onItemClickListener.onItemClick(it) }
+        }
+
     }
 
     override fun getItemCount(): Int {
@@ -33,6 +39,8 @@ class PlanetAdapter(private val planets: List<Planet>?, private val onItemClickL
         val  name:TextView = itemView.findViewById(R.id.planetNameTv)
         val  size:TextView = itemView.findViewById(R.id.planetSizeTv)
         val  description:TextView = itemView.findViewById(R.id.planetDescriptionTv)
+        val rootLayout: ConstraintLayout = itemView.findViewById(R.id.ll_cl)
+
 
     }
 

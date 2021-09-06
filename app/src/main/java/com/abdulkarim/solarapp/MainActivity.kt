@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        //insertPlanetsToDb()
+        insertPlanetsToDb()
 
         findViewById<Button>(R.id.exploreBtn).setOnClickListener {
             startActivity(Intent(this,PlanetListActivity::class.java))

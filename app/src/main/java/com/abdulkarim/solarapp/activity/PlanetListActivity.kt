@@ -46,6 +46,7 @@ class PlanetListActivity : AppCompatActivity(),OnItemClickListener {
     }
 
     override fun onItemClick(planet: Planet) {
+        startActivity(Intent(this,PlanetDetailsActivity::class.java).putExtra("planet",planet))
 
     }
 }
