@@ -1,9 +1,12 @@
 package com.abdulkarim.solarapp
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Button
 import androidx.lifecycle.lifecycleScope
+import com.abdulkarim.solarapp.activity.PlanetListActivity
 import com.abdulkarim.solarapp.data.Planet
 import com.abdulkarim.solarapp.database.AppDatabase
 import kotlinx.coroutines.launch
@@ -16,6 +19,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         //insertPlanetsToDb()
+
+        findViewById<Button>(R.id.exploreBtn).setOnClickListener {
+            startActivity(Intent(this,PlanetListActivity::class.java))
+        }
 
 
     }
